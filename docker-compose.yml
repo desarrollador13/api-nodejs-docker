@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+  database_mysql:
+    build:
+      context: ./Docker-Base-Datos/Base-datos-mysql
+      dockerfile: Dockerfile
+    container_name: database_mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456789"
+      MYSQL_DATABASE: "PRUEBA"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "123456789"
+    volumes:
+      - ./schemas:/var/lib/mysql:rw
+    networks:
+      app-network:
+  api:
+    container_name: api-rest-v1
+    image: api-rest-v1
+    build:
+      context: ./app-backend
+      dockerfile: Dockerfile
+    depends_on:
+      - database_mysql
+    links:
+      - database_mysql
+    networks:
+      app-network:
+    ports:
+      - "3001:3001"
+networks:
+  app-network:

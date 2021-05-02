@@ -1,0 +1,41 @@
+localhost:3001/api/v1/services/prueba/ GET 
+
+
+
+localhost:3001/api/v1/services/usuario/ POST
+
+body
+{
+    "Loguinusuario" : "jpinto",
+    "Contrasena": "123456"
+}
+
+localhost:3001/api/v1/services/ciudad POST
+
+HEADERS
+
+authorization  token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOb21icmUiOiJKb25hdGhhbiBwaW50byIsIlVzdWFyaW8iOiJqcGludG8iLCJDb250cmFzZW5hIjoiMTIzNDU2IiwiSWRTZWRlIjoxLCJOb21icmVTZWRlIjoiQ2VudHJvIiwiSWRSb2xsIjoxLCJOb21icmVSb2xsIjoiQWRtaW4iLCJJZENpdWRhZCI6MSwiTm9tYnJlQ2l1ZGFkIjoiQm9nb3RhIiwiaWF0IjoxNjE5OTgxMjYzLCJleHAiOjE2MjAwNjc2NjN9.AuwXXViFe4OqOFFRLgS0ukiM-t6CgKECW-bplc9XHUM
+
+{
+    "NombreCiudad" : "Cali"
+}
+
+localhost:3001/api/v1/services/usuarios GET
+
+HEADERS
+
+authorization  token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOb21icmUiOiJKb25hdGhhbiBwaW50byIsIlVzdWFyaW8iOiJqcGludG8iLCJDb250cmFzZW5hIjoiMTIzNDU2IiwiSWRTZWRlIjoxLCJOb21icmVTZWRlIjoiQ2VudHJvIiwiSWRSb2xsIjoxLCJOb21icmVSb2xsIjoiQWRtaW4iLCJJZENpdWRhZCI6MSwiTm9tYnJlQ2l1ZGFkIjoiQm9nb3RhIiwiaWF0IjoxNjE5OTgxMjYzLCJleHAiOjE2MjAwNjc2NjN9.AuwXXViFe4OqOFFRLgS0ukiM-t6CgKECW-bplc9XHUM
+
+
+localhost:3001/api/v1/services/sede
+HEADERS
+
+authorization  token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOb21icmUiOiJKb25hdGhhbiBwaW50byIsIlVzdWFyaW8iOiJqcGludG8iLCJDb250cmFzZW5hIjoiMTIzNDU2IiwiSWRTZWRlIjoxLCJOb21icmVTZWRlIjoiQ2VudHJvIiwiSWRSb2xsIjoxLCJOb21icmVSb2xsIjoiQWRtaW4iLCJJZENpdWRhZCI6MSwiTm9tYnJlQ2l1ZGFkIjoiQm9nb3RhIiwiaWF0IjoxNjE5OTgxMjYzLCJleHAiOjE2MjAwNjc2NjN9.AuwXXViFe4OqOFFRLgS0ukiM-t6CgKECW-bplc9XHUM
+
+{
+    "NombreSede" : "sur este",
+    "IdCiudad": 1
+}
+
+Ejecutar pruebas unitarias a
+npm run test

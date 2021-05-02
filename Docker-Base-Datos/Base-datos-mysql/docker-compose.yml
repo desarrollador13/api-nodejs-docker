@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: database_mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456789"
+      MYSQL_DATABASE: "PRUEBA"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "123456789"
+    volumes:
+      - ./schemas:/var/lib/mysql:rw
+    networks:
+      app-network:
+networks:
+  app-network:
+    # name: mysql_net
+    # driver: bridge
